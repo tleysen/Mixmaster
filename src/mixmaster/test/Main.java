@@ -21,8 +21,8 @@ public class Main {
         if(debug)
         {
             MusicData db = new MusicData(2);
-            Song song1 = new Song("Fabrix", "Side Effect", Keys.A1);
-            Song song2 = new Song("Hybrid Minds", "Lost", Keys.A2);
+            Song song1 = new Song("Fabrix", "Side Effect", Keys.A1, "175");
+            Song song2 = new Song("Hybrid Minds", "Lost", Keys.A2, "174");
             
             db.AddSong(song1);
             db.AddSong(song2);
