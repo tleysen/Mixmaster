@@ -13,13 +13,19 @@ public class Song {
     
     
     private final Keys key;
+    private  Keys rkey1;
+    private  Keys rkey2;
+    private  Keys rkey3;
     private final String songname;
     private final String artistname;
+    private final String bpm;
     
-    public Song(String artistname, String songname, Keys key){
+    
+    public Song(String artistname, String songname, Keys key, String bpm){
         this.artistname = artistname;
         this.songname = songname;
         this.key = key;   
+        this.bpm = bpm;
     }
 
     public String getKey() {
@@ -35,6 +41,6 @@ public class Song {
     }   
     
     public String ToString(){
-        return this.artistname + "\t - " + this.songname + "\t " + this.key;
+        return this.artistname + " - " + this.songname + " - " + this.key;
     }
 }

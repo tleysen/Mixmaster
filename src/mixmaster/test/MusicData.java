@@ -16,8 +16,8 @@ import java.io.IOException;
  */
 public class MusicData {
     
-    private ArrayList<Song> musicList;
-    private static final String path = "/Users/thomasleysen/Desktop/naamloze map/test.txt";
+    private final ArrayList<Song> musicList;
+    private static final String path = "/Users/thomasleysen/GitHub/Mixmaster/db/musicdb.txt";
     
     public MusicData(int length) {
         this.musicList = new ArrayList<Song>(length);
@@ -33,6 +33,7 @@ public class MusicData {
             fw = new FileWriter(path, true);
             bw = new BufferedWriter(fw);
             bw.write(song);
+            bw.write(System.lineSeparator());
         } catch(IOException e) {
             e.printStackTrace();
         } finally {
