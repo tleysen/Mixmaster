@@ -16,15 +16,9 @@ import java.io.IOException;
  */
 public class MusicData {
     
-    private final ArrayList<Song> musicList;
     private static final String path = "/Users/thomasleysen/GitHub/Mixmaster/db/musicdb.txt";
     
-    public MusicData(int length) {
-        this.musicList = new ArrayList<Song>(length);
-        
-    }
-    
-    public void WriteToDb(String song){
+    public static void WriteToDb(String song){
         
         BufferedWriter bw = null;
 	FileWriter fw = null;
@@ -48,19 +42,8 @@ public class MusicData {
         }
     }
     
-    public void AddSong(Song newSong){
-        musicList.add(newSong);
-        this.WriteToDb(newSong.ToString());
-    }
-    
-    public void PrintList(){
-        for(int i = 0; i < musicList.size(); i++){
-            System.out.println(musicList.get(i).ToString()); 
-        }
-    }
-
-    public ArrayList<Song> getMusicList() {
-        return musicList;
+    public static void AddSong(Song newSong){
+        WriteToDb(newSong.ToString());
     }
     
     
